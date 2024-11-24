@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-size: 100px;
+      }
+      .video-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 500ms ease-in;
+      }
+      button.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: calc(100vh)"></div>
+    <div class="video-wrapper">
+      <video id="video" src="movie.mp4" width="600" muted loop></video>
+      <button class="playBtn">Play</button>
+    </div>
+    <div style="height: calc(100vh)"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
