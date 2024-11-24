@@ -46,6 +46,7 @@ class VideoPlay {
     this.observer();
   }
 
+  //update button text
   playBtnText(videoElement) {
     (!videoElement.paused && videoElement.muted) || videoElement.paused
       ? (this.textContent = "Play")
@@ -60,6 +61,7 @@ class VideoPlay {
     this.classList.remove("active");
   }
 
+  //restart the video
   videoRestart() {
     this.currentTime = 0;
     this.play();
@@ -74,6 +76,7 @@ class VideoPlay {
     this.play();
   }
 
+  //video element observer to observe if out of view port on in
   videoObserve(btnText) {
     let observer = new IntersectionObserver((item) => {
       if (!item[0].isIntersecting) {
@@ -91,6 +94,11 @@ class VideoPlay {
   }
 }
 
+//play button element
 const playBtn = document.querySelector(".playBtn");
+
+//video element wrapper
 const videoWrapper = document.querySelector(".video-wrapper");
+
+//initialization of the constructor to make the video element functional
 let videoPlay = new VideoPlay(videoWrapper, playBtn);
