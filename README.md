@@ -13,7 +13,7 @@ The goal was to build a system to control a video player, such as this website h
 Download and add the index.js in <script> tag before the </body>. You can change the file name to whatever you want. 
 
 ### Prerequisite
-* An HTML <video> element with a valid video source.
+* An HTML "video" element with a valid video source.
 * The video element should have "muted" and "loop" attributes.
 * A wrapper ( div, section etc. ) element to wrap the video and a button element inside it.
 * The video element should have an ID "video".
